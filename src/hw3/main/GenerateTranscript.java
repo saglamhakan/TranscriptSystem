@@ -9,9 +9,9 @@ public class GenerateTranscript {
     public static void takeInputFromUser(Scanner scanner, Transcript transcript) {
         System.out.println("Enter Student Id:");
         int studentId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline character left by nextInt()
+        scanner.nextLine();
 
-        // Continue taking inputs until the user enters the endoffile indicator
+
         while (true) {
             System.out.println("Enter Department:");
             String department = scanner.nextLine();
@@ -28,7 +28,7 @@ public class GenerateTranscript {
 
             System.out.println("Enter Grade:");
             double grade = scanner.nextDouble();
-            scanner.nextLine(); // Consume newline character left by nextDouble()
+            scanner.nextLine();
 
             CourseGrade courseGrade = new CourseGrade(department, courseCode, courseCredit);
             courseGrade.setGradeTaken(grade);
@@ -37,7 +37,6 @@ public class GenerateTranscript {
             transcript.addCourseTaken(courseGrade);
         }
 
-        // Update the student ID
         transcript.setStudentId(studentId);
     }
 
@@ -55,7 +54,6 @@ public class GenerateTranscript {
                 transcript.setStudentId(studentId);
             }
 
-            // Continue taking inputs until the end of the file
             while (scanner.hasNext()) {
                 String department = scanner.next();
                 int courseCode = scanner.nextInt();
