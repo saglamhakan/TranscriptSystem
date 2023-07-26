@@ -4,10 +4,10 @@ import hw3.util.GradeType;
 
 public class CourseGrade {
 
-    private String courseDepartment = "CENG";
-    private int courseCode = 100;
-    private int courseCredit = 4;
-    private GradeType gradeTaken = GradeType.F;
+    private String courseDepartment;
+    private int courseCode;
+    private int courseCredit;
+    private GradeType gradeTaken;
 
 
 

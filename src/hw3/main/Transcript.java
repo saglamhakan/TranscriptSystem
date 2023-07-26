@@ -15,6 +15,14 @@ public class Transcript {
         this.courseGrades = new ArrayList<>();
     }
 
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
     // Add a course to the transcript
     public void addCourseTaken(CourseGrade courseGrade) {
         if (courseGrade != null) {
